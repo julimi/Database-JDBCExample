@@ -108,7 +108,9 @@ public class JDBCExample {
         }
         rs.close();
         cstmt.close();
+        // make the change commit and 
         // closing database connection
+        connection.setAutoCommit(true);
         connection.close();
     }
 }
